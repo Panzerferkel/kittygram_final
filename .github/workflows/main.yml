@@ -120,7 +120,7 @@ jobs:
         with:
           context: ./nginx/
           push: true
-          tags: partynextdoors/kittygram_gateway:latest
+          tags: aprusov13/kittygram_gateway:latest
   
   deploy:
     runs-on: ubuntu-latest
