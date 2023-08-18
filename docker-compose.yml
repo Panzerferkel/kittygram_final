@@ -23,6 +23,8 @@ services:
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static
+    depends_on:
+      - backend
   gateway:
     build: ./nginx/
     env_file: .env
@@ -31,3 +33,5 @@ services:
     volumes:
       - static:/static
       - media:/app/media/
+    depends_on:
+      - backend
